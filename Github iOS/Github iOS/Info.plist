@@ -27,6 +27,20 @@
 			</array>
 		</dict>
 	</array>
+    <key>FIRAnalyticsDebugEnabled</key>
+    <true/>
+    <key>FIREBASE_ANALYTICS_COLLECTION_ENABLED</key>
+    <true/>
+    <key>FirebaseAppDelegateProxyEnabled</key>
+    <true/>
+    <key>FirebaseAutomaticScreenReportingEnabled</key>
+    <true/>
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>fetch</string>
+    </array>
+    <key>UIUserInterfaceStyle</key>
+    <string>Light</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>

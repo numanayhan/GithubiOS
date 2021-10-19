@@ -69,6 +69,7 @@ class UserDetail: UIViewController ,UserDetailDG{
         self.getUser(sender.login!)
     }
     func getUser(_ searchText:String){
+        if Network.isConnected(){
         self.viewModel.searchUsers(searchText) { user  in
             self.userName.text = user.login
             
@@ -78,6 +79,8 @@ class UserDetail: UIViewController ,UserDetailDG{
             self.avatar.sd_setImage(with: url)
             self.avatar.hideActivityIndicator()
         }
+        }
+        
     }
 }
 extension UserDetail{
