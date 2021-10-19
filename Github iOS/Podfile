@@ -14,6 +14,8 @@ target 'Github iOS' do
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Analytics'
   pod 'Firebase/Performance'
+  pod 'Firebase/AppDistribution'
+
   # Pods for Github iOS
 
 end
