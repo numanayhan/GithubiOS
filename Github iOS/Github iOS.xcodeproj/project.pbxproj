@@ -26,6 +26,7 @@
 		4FA1F054271EA4DC0071D20E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1F053271EA4DC0071D20E /* Config.swift */; };
 		4FA1F056271EA4FA0071D20E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1F055271EA4FA0071D20E /* Helper.swift */; };
 		4FA1F058271EA52A0071D20E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1F057271EA52A0071D20E /* Network.swift */; };
+		4FA1F05B271EA7DF0071D20E /* UserDetailMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1F05A271EA7DF0071D20E /* UserDetailMVVM.swift */; };
 		6BE8AEF156216C40C6CB1C8D /* Pods_Github_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472F7526584ED26CA59BFF06 /* Pods_Github_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		4FA1F053271EA4DC0071D20E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		4FA1F055271EA4FA0071D20E /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		4FA1F057271EA52A0071D20E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		4FA1F05A271EA7DF0071D20E /* UserDetailMVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailMVVM.swift; sourceTree = "<group>"; };
 		B04D679CAF51809D45EF8556 /* Pods-Github iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github iOS.release.xcconfig"; path = "Target Support Files/Pods-Github iOS/Pods-Github iOS.release.xcconfig"; sourceTree = "<group>"; };
 		FC99DABE00407AB81CA83AD7 /* Pods-Github iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github iOS.debug.xcconfig"; path = "Target Support Files/Pods-Github iOS/Pods-Github iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +170,7 @@
 		4FA1F03D271EA0C70071D20E /* UserDetail */ = {
 			isa = PBXGroup;
 			children = (
+				4FA1F059271EA7CC0071D20E /* MVVM */,
 				4FA1F041271EA0E40071D20E /* Models */,
 				4FA1F03E271EA0D40071D20E /* Controllers */,
 			);
@@ -216,6 +219,14 @@
 				4FA1F057271EA52A0071D20E /* Network.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		4FA1F059271EA7CC0071D20E /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				4FA1F05A271EA7DF0071D20E /* UserDetailMVVM.swift */,
+			);
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 		B5A7C476CC83975281389B8F /* Frameworks */ = {
@@ -366,6 +377,7 @@
 				4FA1F056271EA4FA0071D20E /* Helper.swift in Sources */,
 				4FA1F040271EA0E00071D20E /* UserDetail.swift in Sources */,
 				4FA1F054271EA4DC0071D20E /* Config.swift in Sources */,
+				4FA1F05B271EA7DF0071D20E /* UserDetailMVVM.swift in Sources */,
 				4FA1F043271EA0F10071D20E /* UserDetailModel.swift in Sources */,
 				4FA1F052271EA4D30071D20E /* ServiceManager.swift in Sources */,
 				4FA1F04D271EA19C0071D20E /* TitleLabel.swift in Sources */,

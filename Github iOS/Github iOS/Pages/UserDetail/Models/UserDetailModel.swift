@@ -6,3 +6,6 @@
 //
 
 import Foundation
+protocol UserDetailDG {
+    func setUser(_ sender:User)
+}

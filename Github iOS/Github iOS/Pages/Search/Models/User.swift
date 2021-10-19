@@ -6,3 +6,8 @@
 //
 
 import Foundation
+struct User:  Encodable, Decodable{
+    var login: String?
+    var avatar_url: String?
+    var active:Bool?
+}

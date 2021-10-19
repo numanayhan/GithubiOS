@@ -2,6 +2,9 @@ PODS:
   - Alamofire (5.4.4)
   - AlamofireImage (4.2.0):
     - Alamofire (~> 5.4)
+  - CocoaLumberjack (3.7.2):
+    - CocoaLumberjack/Core (= 3.7.2)
+  - CocoaLumberjack/Core (3.7.2)
   - Firebase/Analytics (8.8.0):
     - Firebase/Core
   - Firebase/Core (8.8.0):
@@ -125,8 +128,11 @@ PODS:
   - NVActivityIndicatorView/Base (5.1.1)
   - PromisesObjC (2.0.0)
   - SDWebImage/Core (5.12.0)
-  - SDWebImageSVGCoder (1.6.0):
-    - SDWebImage/Core (~> 5.6)
+  - SDWebImageSVGCoder (0.3.0):
+    - SDWebImage/Core (~> 5.0)
+    - SVGKit (>= 2.1)
+  - SVGKit (3.0.0):
+    - CocoaLumberjack (~> 3.0)
   - SwiftyJSON (5.0.1)
   - TinyConstraints (4.0.2)
 
@@ -145,6 +151,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
+    - CocoaLumberjack
     - Firebase
     - FirebaseABTesting
     - FirebaseAnalytics
@@ -162,12 +169,14 @@ SPEC REPOS:
     - PromisesObjC
     - SDWebImage
     - SDWebImageSVGCoder
+    - SVGKit
     - SwiftyJSON
     - TinyConstraints
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
+  CocoaLumberjack: b7e05132ff94f6ae4dfa9d5bce9141893a21d9da
   Firebase: 629510f1a9ddb235f3a7c5c8ceb23ba887f0f814
   FirebaseABTesting: 981336dd14d84787e33466e4247f77ec2343f8d9
   FirebaseAnalytics: 5506ea8b867d8423485a84b4cd612d279f7b0b8a
@@ -184,10 +193,11 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SDWebImage: 4ea20cca2986adc5aacde07aa686742fd4c67a37
-  SDWebImageSVGCoder: 020cc0f1ab0ef8ca63a9365c03421d67aa3d4a46
+  SDWebImageSVGCoder: 4b354bcdc7d74ce14d9fdb3c9ed9ab2c667f3b57
+  SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
 
-PODFILE CHECKSUM: a4f40298f5aba2fa3b96fc6f79080e6931be625e
+PODFILE CHECKSUM: e31c4103cff79d6251ad65293a4c3f52c3fb8c83
 
 COCOAPODS: 1.11.2
