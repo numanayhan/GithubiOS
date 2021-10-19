@@ -22,6 +22,10 @@
 		4FA1F04A271EA1320071D20E /* SearchMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1F049271EA1320071D20E /* SearchMVVM.swift */; };
 		4FA1F04D271EA19C0071D20E /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1F04C271EA19C0071D20E /* TitleLabel.swift */; };
 		4FA1F04F271EA1AE0071D20E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1F04E271EA1AE0071D20E /* View.swift */; };
+		4FA1F052271EA4D30071D20E /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1F051271EA4D30071D20E /* ServiceManager.swift */; };
+		4FA1F054271EA4DC0071D20E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1F053271EA4DC0071D20E /* Config.swift */; };
+		4FA1F056271EA4FA0071D20E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1F055271EA4FA0071D20E /* Helper.swift */; };
+		4FA1F058271EA52A0071D20E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1F057271EA52A0071D20E /* Network.swift */; };
 		6BE8AEF156216C40C6CB1C8D /* Pods_Github_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472F7526584ED26CA59BFF06 /* Pods_Github_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +48,10 @@
 		4FA1F049271EA1320071D20E /* SearchMVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMVVM.swift; sourceTree = "<group>"; };
 		4FA1F04C271EA19C0071D20E /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		4FA1F04E271EA1AE0071D20E /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		4FA1F051271EA4D30071D20E /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		4FA1F053271EA4DC0071D20E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		4FA1F055271EA4FA0071D20E /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		4FA1F057271EA52A0071D20E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		B04D679CAF51809D45EF8556 /* Pods-Github iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github iOS.release.xcconfig"; path = "Target Support Files/Pods-Github iOS/Pods-Github iOS.release.xcconfig"; sourceTree = "<group>"; };
 		FC99DABE00407AB81CA83AD7 /* Pods-Github iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github iOS.debug.xcconfig"; path = "Target Support Files/Pods-Github iOS/Pods-Github iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +90,7 @@
 		4FA1F015271E9E840071D20E /* Github iOS */ = {
 			isa = PBXGroup;
 			children = (
+				4FA1F050271EA4C50071D20E /* Services */,
 				4FA1F04B271EA1910071D20E /* Extentions */,
 				4FA1F032271E9FA30071D20E /* Pages */,
 				4FA1F02F271E9F840071D20E /* Launch */,
@@ -196,6 +205,17 @@
 				4FA1F04E271EA1AE0071D20E /* View.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		4FA1F050271EA4C50071D20E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4FA1F051271EA4D30071D20E /* ServiceManager.swift */,
+				4FA1F053271EA4DC0071D20E /* Config.swift */,
+				4FA1F055271EA4FA0071D20E /* Helper.swift */,
+				4FA1F057271EA52A0071D20E /* Network.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B5A7C476CC83975281389B8F /* Frameworks */ = {
@@ -342,8 +362,12 @@
 			files = (
 				4FA1F045271EA1080071D20E /* UserCell.swift in Sources */,
 				4FA1F02E271E9F6D0071D20E /* AppRoot.swift in Sources */,
+				4FA1F058271EA52A0071D20E /* Network.swift in Sources */,
+				4FA1F056271EA4FA0071D20E /* Helper.swift in Sources */,
 				4FA1F040271EA0E00071D20E /* UserDetail.swift in Sources */,
+				4FA1F054271EA4DC0071D20E /* Config.swift in Sources */,
 				4FA1F043271EA0F10071D20E /* UserDetailModel.swift in Sources */,
+				4FA1F052271EA4D30071D20E /* ServiceManager.swift in Sources */,
 				4FA1F04D271EA19C0071D20E /* TitleLabel.swift in Sources */,
 				4FA1F017271E9E840071D20E /* AppDelegate.swift in Sources */,
 				4FA1F047271EA1190071D20E /* User.swift in Sources */,
