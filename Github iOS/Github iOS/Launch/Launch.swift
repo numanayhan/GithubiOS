@@ -9,7 +9,9 @@ import UIKit
 import TinyConstraints
 import Firebase
 
-class Launch: UIViewController {
+class Launch: UIViewController ,Coordinating{
+    var coordinator: Coordinator?
+    
     lazy var logo : TitleLabel = {
         let label = TitleLabel()
         label.text = "Github"
@@ -22,6 +24,15 @@ class Launch: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayout()
+        
+//        appRoot?.nameList()
+        let actualStartDate = "2021-02-08T06:30:00Z"
+        
+        var startDate =  actualStartDate
+//        let dateStart = startDate.getFormattedDate(format: "dd.MM.yyyy-HH:mm")
+//        print("dateStart",dateStart)
+        startDate = startDate.convertDateString(date: startDate, format: "dd.MM.yyyy-HH:mm")
+        print("startDate",startDate)
     }
     func setLayout(){
         view.backgroundColor = .black
@@ -30,14 +41,17 @@ class Launch: UIViewController {
         logo.width(view.frame.width)
         logo.height(90)
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        startTimer()
+//        startTimer()
     }
+    
     func startTimer() {
         stopTimer()
         timer = Timer.scheduledTimer(withTimeInterval: 1.66, repeats: false) {  _ in
-            self.navigationController?.pushViewController(Search(), animated: true)
+             
+            self.navigationController?.pushViewController(TopMenu(), animated: true)
         }
     }
     func stopTimer() {
@@ -47,7 +61,7 @@ class Launch: UIViewController {
         stopTimer()
     }
     override func viewDidAppear(_ animated: Bool) {
-       checkForUpdate()
+      // checkForUpdate()
     }
     private func checkForUpdate() {
         AppDistribution.appDistribution().checkForUpdate(completion: { [self] release, error in

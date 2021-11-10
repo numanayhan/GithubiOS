@@ -67,6 +67,8 @@ class Search: UIViewController {
         setTableView()
         getUsers()
         
+        view.layer.cornerRadius  = 30
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     // UI Objeleri biçimlendirildi.
     func setLayout(){
@@ -87,7 +89,7 @@ class Search: UIViewController {
         tableView.separatorInset = .zero
         tableView.separatorEffect = .none
         view.addSubview(tableView)
-        tableView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor , right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: view.frame.width, height: view.frame.height)
+        tableView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor , right: view.rightAnchor, paddingTop: 50, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: view.frame.width, height: view.frame.height)
         tableView.reloadData()
         
     }

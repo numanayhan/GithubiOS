@@ -21,4 +21,19 @@ class AppRoot {
         window!.rootViewController = root
         window!.makeKeyAndVisible()
     }
+    func nameList(){
+        let root = Navigation(rootViewController: NameLists())
+        root.isDark = true
+        root.isHide = false
+        window!.rootViewController = root
+        window!.makeKeyAndVisible()
+    }
+    func coridanor(_ view:UIViewController){
+        
+        let root = Navigation(rootViewController: view)
+        root.isDark = true
+        root.isHide = false
+        window!.rootViewController = root
+        window!.makeKeyAndVisible()
+    }
 }
