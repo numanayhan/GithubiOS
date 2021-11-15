@@ -18,6 +18,14 @@ class TopMenu: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
  
+        if Network.isConnected(){
+            
+            //internet
+        }else{
+            // yoksa
+            
+        }
+        
         setupContainer()
         setChildController(0,1)
         

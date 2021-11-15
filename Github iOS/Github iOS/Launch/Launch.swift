@@ -8,31 +8,35 @@
 import UIKit
 import TinyConstraints
 import Firebase
-
+func countLines(of label: UILabel, maxHeight: CGFloat) -> Int {
+    guard let labelText = label.text else {
+               return 0
+           }
+           
+           let rect = CGSize(width: label.bounds.width, height: maxHeight)
+           let labelSize = labelText.boundingRect(with: rect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: label.font!], context: nil)
+           
+           let lines = Int(ceil(CGFloat(labelSize.height) / label.font.lineHeight))
+           return labelText.contains("\n") && lines == 1 ? lines + 1 : lines
+   }
 class Launch: UIViewController ,Coordinating{
     var coordinator: Coordinator?
     
     lazy var logo : TitleLabel = {
         let label = TitleLabel()
-        label.text = "Github"
-        label.font = UIFont.boldSystemFont(ofSize: 34)
-        label.textAlignment = NSTextAlignment.center
+        
+        label.text = "To fix this issue, we need to set correct number of lines required for that text to fit within required height."
+        label.numberOfLines = 0
+//        label.font = UIFont.boldSystemFont(ofSize: 34)
+//        label.textAlignment = NSTextAlignment.center
         label.textColor = .white
+        label.numberOfLines = countLines(of: label, maxHeight: 150)
         return label
     }()
     weak var timer: Timer?
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayout()
-        
-//        appRoot?.nameList()
-        let actualStartDate = "2021-02-08T06:30:00Z"
-        
-        var startDate =  actualStartDate
-//        let dateStart = startDate.getFormattedDate(format: "dd.MM.yyyy-HH:mm")
-//        print("dateStart",dateStart)
-        startDate = startDate.convertDateString(date: startDate, format: "dd.MM.yyyy-HH:mm")
-        print("startDate",startDate)
     }
     func setLayout(){
         view.backgroundColor = .black
@@ -50,7 +54,6 @@ class Launch: UIViewController ,Coordinating{
     func startTimer() {
         stopTimer()
         timer = Timer.scheduledTimer(withTimeInterval: 1.66, repeats: false) {  _ in
-             
             self.navigationController?.pushViewController(TopMenu(), animated: true)
         }
     }

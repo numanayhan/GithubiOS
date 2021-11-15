@@ -71,7 +71,7 @@ extension UIView {
         activityProgressView.startAnimating()
         self.addSubview(activityProgressView)
         activityProgressView.centerInSuperview()
-       
+        
         activityIndicator.height(45)
         activityIndicator.width(45)
         activityIndicator.startAnimating()
@@ -90,69 +90,69 @@ extension UIView {
         
         activityView!.startAnimating()
     }
-
+    
     func hideActivityIndicator(){
         if (activityView != nil){
             activityView?.stopAnimating()
         }
     }
-      
-           func roundCorners(corners: UIRectCorner, radius: CGFloat) {
-               let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-               let mask = CAShapeLayer()
-               mask.path = path.cgPath
-               layer.mask = mask
-           }
-           @objc func loadingWhite(_ show: Bool) {
-                if show {
-                    let indicator = UIActivityIndicatorView()
-                    let buttonHeight = self.bounds.size.height
-                    let buttonWidth = self.bounds.size.width
-                    indicator.color = UIColor.white
-                    indicator.center = CGPoint(x: buttonWidth - buttonHeight/2, y: buttonHeight/2)
-                    self.addSubview(indicator)
-                    indicator.startAnimating()
-                } else {
-                    for view in self.subviews {
-                        if let indicator = view as? UIActivityIndicatorView {
-                            indicator.stopAnimating()
-                            indicator.removeFromSuperview()
-                        }
-                    }
-                }
-            }
-        
-        func format(with mask: String, phone: String) -> String {
-            let numbers = phone.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
-            var result = ""
-            var index = numbers.startIndex // numbers iterator
-
-            // iterate over the mask characters until the iterator of numbers ends
-            for ch in mask where index < numbers.endIndex {
-                if ch == "X" {
-                    // mask requires a number in this place, so take the next one
-                    result.append(numbers[index])
-
-                    // move numbers iterator to the next index
-                    index = numbers.index(after: index)
-
-                } else {
-                    result.append(ch) // just append a mask character
-                }
-            }
-            return result
-        }
-        
-        func textLimit(existingText: String?,
-                       newText: String,
-                       limit: Int) -> Bool {
-            let text = existingText ?? ""
-            let isAtLimit = text.count + newText.count <= limit
-            return isAtLimit
-        }
-        
     
-
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
+    @objc func loadingWhite(_ show: Bool) {
+        if show {
+            let indicator = UIActivityIndicatorView()
+            let buttonHeight = self.bounds.size.height
+            let buttonWidth = self.bounds.size.width
+            indicator.color = UIColor.white
+            indicator.center = CGPoint(x: buttonWidth - buttonHeight/2, y: buttonHeight/2)
+            self.addSubview(indicator)
+            indicator.startAnimating()
+        } else {
+            for view in self.subviews {
+                if let indicator = view as? UIActivityIndicatorView {
+                    indicator.stopAnimating()
+                    indicator.removeFromSuperview()
+                }
+            }
+        }
+    }
+    
+    func format(with mask: String, phone: String) -> String {
+        let numbers = phone.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+        var result = ""
+        var index = numbers.startIndex // numbers iterator
+        
+        // iterate over the mask characters until the iterator of numbers ends
+        for ch in mask where index < numbers.endIndex {
+            if ch == "X" {
+                // mask requires a number in this place, so take the next one
+                result.append(numbers[index])
+                
+                // move numbers iterator to the next index
+                index = numbers.index(after: index)
+                
+            } else {
+                result.append(ch) // just append a mask character
+            }
+        }
+        return result
+    }
+    
+    func textLimit(existingText: String?,
+                   newText: String,
+                   limit: Int) -> Bool {
+        let text = existingText ?? ""
+        let isAtLimit = text.count + newText.count <= limit
+        return isAtLimit
+    }
+    
+    
+    
     
 }
- 
+

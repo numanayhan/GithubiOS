@@ -17,9 +17,9 @@ class NameLists: UIViewController {
     //TableView tanımlandı
     lazy var tableView:UITableView = {
         let tv = UITableView()
-        
         return tv
     }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,10 +71,7 @@ extension NameLists: UITableViewDelegate,UITableViewDataSource{
     }
     
 }
-
-class NameCell:UITableViewCell{
-    
-}
+ 
 extension NameLists{
     
     override func viewWillAppear(_ animated: Bool) {
